@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#pokedex {
+    background-color: #fb6c6c;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pokemonContainer:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 250ms ease-in-out;
+}
+
+.pokemonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    border: 2px solid white;
+    height: 300px;
+    width: 200px;
+}
+
+.pics {
+    object-fit: cover;
+    height: 200px;
+    width: 190px;
+}
+
+
+
