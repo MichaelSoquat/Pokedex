@@ -4,7 +4,7 @@ body {
 }
 
 #pokedex {
-    background-color: #fb6c6c;
+    background-color:rgba(53, 30, 30, 1);
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -33,15 +33,30 @@ body {
     width: 190px;
 }
 
-#spaceBetweenType {
+.typeSpaceBetween {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    
+    flex-wrap: wrap;
 }
 
-.spaceBetweenType {
-    padding-right: 10px;
-    padding-left: 10px;
+.d-none {
+    display: none;
+}
+
+.styleType {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.styleOrder {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.bgGreen {
+    background-color: green;
 }
 
 
