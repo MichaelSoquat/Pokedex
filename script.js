@@ -1,4 +1,8 @@
+// VARIABLE
+
 let currentPokemon;
+
+// LOAD POKEMON 
 
 async function loadPokemon() { //asynchrone Funktion; lade Pokemon von API
     for (let i = 1; i < 100; i++) {
@@ -11,6 +15,7 @@ async function loadPokemon() { //asynchrone Funktion; lade Pokemon von API
     }
 }
 
+// RENDER
 
 function renderPokemonInfo() {
     let order = currentPokemon.order;
@@ -42,12 +47,14 @@ function renderPokemonInfo() {
     
 }
 
+// CHECK SECOND TYPE
 
 function checkIfSecondType(type2) {
     if (type2) {
         document.getElementById(`${currentPokemon.order}`).classList.remove(`d-none`);
     }
 }
+// GIVE EXACT BG COLOR
 
 function backgroundColor() {
     if (currentPokemon.types[0].type.name === 'grass'||'bug'||'poison') {
@@ -93,4 +100,10 @@ function backgroundColor() {
     if (currentPokemon.types[0].type.name[0].toUpperCase()+currentPokemon.types[0].type.name.substring(1) === 'Ghost') {
         document.getElementById(`card${currentPokemon.order}`).classList.add('bgPurple');
     }
+}
+
+// SEARCH POKEMON
+
+function searchForPokemon() {
+    let searchPokemon = document.getElementById('searchPokemon');
 }
