@@ -1,14 +1,87 @@
+/* === GENERAL === */
+
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
 
+.d-none {
+    display: none;
+}
+
+
+/* === NAVBAR === */
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    background-color: black;
+}
+
+.imgContainer {
+    height: 100%;
+}
+
+.logo {
+    height: 100%;
+    object-fit: cover;
+}
+
+.centerSearchField {
+    display: flex;
+    align-items: center;
+}
+
+.styleInput {
+    height: 40px;
+    margin-right: 30px;
+    background-color: black;
+    filter: drop-shadow(0 0 0.4rem rgb(245, 238, 198));
+    border-radius: 20px;
+    color: #8e8e90;
+}
+
+.styleInput::placeholder {
+    color: #8e8e90;
+}
+
+.styleInput:focus {
+    outline: none;
+    filter: drop-shadow(0 0 1rem rgb(245, 238, 198));
+}
+
+.styleSearchButton {
+    height: 45px;
+    background-color: black;
+    filter: drop-shadow(0 0 0.4rem rgb(245, 238, 198));
+    border-radius: 20px;
+    color: #8e8e90;
+}
+
+/* === POKEDEX DESIGN GENERAL === */
+
 #pokedex {
-    background-color:rgba(53, 30, 30, 1);
+    background-color:#8e8e90;
     color: white;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/* === CARDS === */
+
+.pokemonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 2px rgba(34, 33, 33, 0.7);
+    height: 300px;
+    width: 200px;
 }
 
 .pokemonContainer:hover {
@@ -17,22 +90,6 @@ body {
     transition: 250ms ease-in-out;
 }
 
-.pokemonContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-    border: 2px solid white;
-    height: 300px;
-    width: 200px;
-}
-
-.pics {
-    object-fit: cover;
-    height: 200px;
-    width: 190px;
-}
 
 .typeSpaceBetween {
     display: flex;
@@ -40,10 +97,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-.d-none {
-    display: none;
 }
 
 .styleType {
@@ -55,33 +108,43 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+/* === CARD PICTURES === */
+
+.pics {
+    object-fit: cover;
+    height: 200px;
+    width: 190px;
+    filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
+}
+
+/* === CARDS BG-COLORS === */
 
 .bgGreen {
-    background-color: green;
+    background-color: #41B3A3;
 }
 
 .bgRed{
-    background-color: red;
+    background-color: #E27D60;
 }
 
 .bgBlue{
-    background-color: blue;
+    background-color: #23B2EE;
 }
 
 .bgYellow {
-    background-color: yellow;
+    background-color: #fae596;
 }
 
 .bgGrey{
-    background-color: grey;
+    background-color: #c5d5cb;
 }
 
 .bgBrown{
-    background-color: brown;
+    background-color: #bd8c7d;
 }
 
 .bgPurple {
-    background-color: purple;
+    background-color: #c38dec;
 }
 
 

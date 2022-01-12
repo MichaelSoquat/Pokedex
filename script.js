@@ -11,6 +11,7 @@ async function loadPokemon() { //asynchrone Funktion; lade Pokemon von API
     }
 }
 
+
 function renderPokemonInfo() {
     let order = currentPokemon.order;
     let type2 = currentPokemon.types[1];
