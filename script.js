@@ -40,9 +40,9 @@ function renderPokemonInfo(i) {
         id = allPokemons[i].id;
     }
 
-    document.getElementById('pokedex').innerHTML += `<div  id="card${id}" class="pokemonContainer"><span class="styleid">${`#` + id}</span>
+    document.getElementById('pokedex').innerHTML += `<div onclick="bigPokemonCard(${id},${i})" id="card${id}" class="pokemonContainer"><span class="styleid">${`#` + id}</span>
     <span class="centerName">${allPokemons[i]['species']['name'][0].toUpperCase() + allPokemons[i]['species']['name'].substring(1)}</span>
-    <img onclick="bigPokemonCard(${id},${i})" class="pics" src="${allPokemons[i].sprites.front_shiny}"><div id="spaceBetweenType" class="typeSpaceBetween"><div class="styleType">${allPokemons[i].types[0].type.name[0].toUpperCase() + allPokemons[i].types[0].type.name.substring(1)}</div>
+    <img  id="pic${id}"  class="pics" src="${allPokemons[i].sprites.front_shiny}"><div id="spaceBetweenType" class="typeSpaceBetween"><div class="styleType">${allPokemons[i].types[0].type.name[0].toUpperCase() + allPokemons[i].types[0].type.name.substring(1)}</div>
     <div id="${allPokemons[i].id}" class="d-none styleType">${type2}</div></div></div>`;
     checkIfSecondType(type2, i);
 
@@ -133,24 +133,13 @@ function bigPokemonCard(id, i) {
         id = allPokemons[i].id;
     }
 
-    document.getElementById(`card${id}`).classList.add('bigPokemonCenter');
-    document.getElementById(`card${id}`).innerHTML += `<div id="positionShutDown${id}" onclick="closeBigPokemon(${id},${i})" class="positionShutDown">X</div>`;
 
+    if (!document.getElementById(`card${id}`).classList.contains('bigPokemonCenter')) {
+        document.getElementById(`card${id}`).classList.add('bigPokemonCenter');
+    }
+    else { document.getElementById(`card${id}`).classList.remove('bigPokemonCenter'); }
 }
 
-function closeBigPokemon(id, i) {
-    if (allPokemons[i].id > 9) {
-        id = '0' + allPokemons[i].id;
-    }
-    if (allPokemons[i].id < 10) {
-        id = '00' + allPokemons[i].id;
-    }
-    if (allPokemons[i].id > 99) {
-        id = allPokemons[i].id;
-    }
 
-    document.getElementById(`card${id}`).classList.remove('bigPokemonCenter');
-    document.getElementById(`positionShutDown${id}`).classList.remove('positionShutDown');
-    document.getElementById(`positionShutDown${id}`).innerHTML = ``;
-    renderPokemonInfo(i);
-}
+
+
